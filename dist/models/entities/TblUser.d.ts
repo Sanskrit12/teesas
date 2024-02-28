@@ -1,0 +1,38 @@
+export declare class TblUser {
+    id: number;
+    classId: string;
+    adate: string;
+    profile: string;
+    otp: number;
+    avatarIndex: string;
+    name: string;
+    countryCode: string;
+    mobile: string;
+    email: string;
+    gender: string;
+    birthday: string;
+    password: string;
+    passwordString: string;
+    countryId: number;
+    city: string;
+    location: string;
+    lat: string;
+    lang: string;
+    locationName: string;
+    socialId: string;
+    loginType: string;
+    profileComplete: string;
+    isVerified: boolean;
+    created: Date;
+    otpCreatedAt: Date;
+    deviceType: string;
+    deviceToken: string;
+    deviceId: string | null;
+    lastVisit: string;
+    salesRefCode: string | null;
+    status: '0' | '1' | '2';
+    bulkStatus: number;
+    deviceDetails: string | null;
+    isPasswordSetup: boolean | null;
+    socketId: string | null;
+}

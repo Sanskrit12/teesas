@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Pre School",
+        "country_id": "0",
+        "status": "1",
+        "priority": "9"
+    },
+    {
+        "name": "Learn Nigerian Languages",
+        "country_id": "0",
+        "status": "1",
+        "priority": "7"
+    },
+    {
+        "name": "Secondary School Entrance Exam Prep.",
+        "country_id": "0",
+        "status": "1",
+        "priority": "6"
+    },
+    {
+        "name": "Primary School",
+        "country_id": "0",
+        "status": "1",
+        "priority": "9"
+    },
+    {
+        "name": "7 Habits Club",
+        "country_id": "0",
+        "status": "1",
+        "priority": "6"
+    },
+    {
+        "name": "Pre School",
+        "country_id": "0",
+        "status": "1",
+        "priority": "10"
+    },
+    {
+        "name": "Learn Nigerian Languages",
+        "country_id": "0",
+        "status": "1",
+        "priority": "8"
+    },
+    {
+        "name": "Secondary School Entrance Exam Prep.",
+        "country_id": "0",
+        "status": "1",
+        "priority": "7"
+    },
+    {
+        "name": "Kenya Primary School Education Assessment",
+        "country_id": "0",
+        "status": "1",
+        "priority": "5"
+    },
+    {
+        "name": "trial",
+        "country_id": "0",
+        "status": "0",
+        "priority": "4"
+    },
+    {
+        "name": "Competence Based Curriculum",
+        "country_id": "0",
+        "status": "1",
+        "priority": "3"
+    },
+    {
+        "name": "Academics",
+        "country_id": "0",
+        "status": "0",
+        "priority": "2"
+    },
+    {
+        "name": "Matric",
+        "country_id": "0",
+        "status": "1",
+        "priority": "1"
+    }
+]

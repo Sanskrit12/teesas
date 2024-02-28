@@ -1,0 +1,1342 @@
+[
+    {
+        "id": "1",
+        "country": "Albania",
+        "country_code": "AL",
+        "dialing_code": "355",
+        "currency": "Leke",
+        "code": "ALL",
+        "symbol": "Lek",
+        "price_rate": "104.73"
+    },
+    {
+        "id": "3",
+        "country": "Afghanistan",
+        "country_code": "AF",
+        "dialing_code": "93",
+        "currency": "Afghanis",
+        "code": "AFN",
+        "symbol": "؋",
+        "price_rate": "78.33"
+    },
+    {
+        "id": "4",
+        "country": "Argentina",
+        "country_code": "AR",
+        "dialing_code": "54",
+        "currency": "Pesos",
+        "code": "ARS",
+        "symbol": "$",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "5",
+        "country": "Aruba",
+        "country_code": "AW",
+        "dialing_code": "297",
+        "currency": "Guilders",
+        "code": "AWG",
+        "symbol": "ƒ",
+        "price_rate": "1.80"
+    },
+    {
+        "id": "6",
+        "country": "Australia",
+        "country_code": "AU",
+        "dialing_code": "61",
+        "currency": "Dollars",
+        "code": "AUD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "7",
+        "country": "Azerbaijan",
+        "country_code": "AZ",
+        "dialing_code": "994",
+        "currency": "New Manats",
+        "code": "AZN",
+        "symbol": "ман",
+        "price_rate": "1.70"
+    },
+    {
+        "id": "8",
+        "country": "Bahamas",
+        "country_code": "BS",
+        "dialing_code": "1242",
+        "currency": "Dollars",
+        "code": "BSD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "9",
+        "country": "Barbados",
+        "country_code": "BB",
+        "dialing_code": "1246",
+        "currency": "Dollars",
+        "code": "BBD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "10",
+        "country": "Belarus",
+        "country_code": "BY",
+        "dialing_code": "375",
+        "currency": "Rubles",
+        "code": "BYR",
+        "symbol": "p.",
+        "price_rate": "75.81"
+    },
+    {
+        "id": "11",
+        "country": "Belgium",
+        "country_code": "EU",
+        "dialing_code": "32",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "12",
+        "country": "Beliz",
+        "country_code": "BZ",
+        "dialing_code": "501",
+        "currency": "Dollars",
+        "code": "BZD",
+        "symbol": "BZ$",
+        "price_rate": "1"
+    },
+    {
+        "id": "13",
+        "country": "Bermuda",
+        "country_code": "BM",
+        "dialing_code": "1441",
+        "currency": "Dollars",
+        "code": "BMD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "14",
+        "country": "Bolivia",
+        "country_code": "BO",
+        "dialing_code": "591",
+        "currency": "Bolivianos",
+        "code": "BOB",
+        "symbol": "$b",
+        "price_rate": "6.91"
+    },
+    {
+        "id": "15",
+        "country": "Bosnia and Herzegovina",
+        "country_code": "BA",
+        "dialing_code": "387",
+        "currency": "Convertible Marka",
+        "code": "BAM",
+        "symbol": "KM",
+        "price_rate": "1.66"
+    },
+    {
+        "id": "16",
+        "country": "Botswana",
+        "country_code": "BW",
+        "dialing_code": "267",
+        "currency": "Pula",
+        "code": "BWP",
+        "symbol": "P",
+        "price_rate": "11.09"
+    },
+    {
+        "id": "17",
+        "country": "Bulgaria",
+        "country_code": "BG",
+        "dialing_code": "359",
+        "currency": "Leva",
+        "code": "BGN",
+        "symbol": "лв",
+        "price_rate": "1.67"
+    },
+    {
+        "id": "18",
+        "country": "Brazil",
+        "country_code": "BR",
+        "dialing_code": "55",
+        "currency": "Reais",
+        "code": "BRL",
+        "symbol": "R$",
+        "price_rate": "5.78"
+    },
+    {
+        "id": "19",
+        "country": "Britain (United Kingdom)",
+        "country_code": "GB",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "GBP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "20",
+        "country": "Brunei Darussalam",
+        "country_code": "BN",
+        "dialing_code": "673",
+        "currency": "Dollars",
+        "code": "BND",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "21",
+        "country": "Cambodia",
+        "country_code": "KH",
+        "dialing_code": "855",
+        "currency": "Riels",
+        "code": "KHR",
+        "symbol": "៛",
+        "price_rate": "4054.70"
+    },
+    {
+        "id": "22",
+        "country": "Canada",
+        "country_code": "CA",
+        "dialing_code": "1",
+        "currency": "Dollars",
+        "code": "CAD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "23",
+        "country": "Cayman Islands",
+        "country_code": "KY",
+        "dialing_code": "345",
+        "currency": "Dollars",
+        "code": "KYD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "24",
+        "country": "Chile",
+        "country_code": "CL",
+        "dialing_code": "56",
+        "currency": "Pesos",
+        "code": "CLP",
+        "symbol": "$",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "25",
+        "country": "China",
+        "country_code": "CN",
+        "dialing_code": "86",
+        "currency": "Yuan Renminbi",
+        "code": "CNY",
+        "symbol": "¥",
+        "price_rate": "6.57"
+    },
+    {
+        "id": "26",
+        "country": "Colombia",
+        "country_code": "CO",
+        "dialing_code": "57",
+        "currency": "Pesos",
+        "code": "COP",
+        "symbol": "$",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "27",
+        "country": "Costa Rica",
+        "country_code": "CR",
+        "dialing_code": "506",
+        "currency": "Col",
+        "code": "CRC",
+        "symbol": "₡",
+        "price_rate": "612.56"
+    },
+    {
+        "id": "28",
+        "country": "Croatia",
+        "country_code": "HR",
+        "dialing_code": "385",
+        "currency": "Kuna",
+        "code": "HRK",
+        "symbol": "kn",
+        "price_rate": "6.45"
+    },
+    {
+        "id": "29",
+        "country": "Cuba",
+        "country_code": "CU",
+        "dialing_code": "53",
+        "currency": "Pesos",
+        "code": "CUP",
+        "symbol": "₱",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "30",
+        "country": "Cyprus",
+        "country_code": "EU",
+        "dialing_code": "357",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "31",
+        "country": "Czech Republic",
+        "country_code": "CZ",
+        "dialing_code": "420",
+        "currency": "Koruny",
+        "code": "CZK",
+        "symbol": "K?",
+        "price_rate": "22.23"
+    },
+    {
+        "id": "32",
+        "country": "Denmark",
+        "country_code": "DK",
+        "dialing_code": "45",
+        "currency": "Kroner",
+        "code": "DKK",
+        "symbol": "kr",
+        "price_rate": "8.55"
+    },
+    {
+        "id": "33",
+        "country": "Dominican Republic",
+        "country_code": "DO",
+        "dialing_code": "1849",
+        "currency": "Pesos",
+        "code": "DOP ",
+        "symbol": "RD$",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "35",
+        "country": "Egypt",
+        "country_code": "EG",
+        "dialing_code": "20",
+        "currency": "Pounds",
+        "code": "EGP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "36",
+        "country": "El Salvador",
+        "country_code": "SV",
+        "dialing_code": "503",
+        "currency": "Colones",
+        "code": "SVC",
+        "symbol": "$",
+        "price_rate": "612.56"
+    },
+    {
+        "id": "37",
+        "country": "England (United Kingdom)",
+        "country_code": "GB",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "GBP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "39",
+        "country": "Falkland Islands",
+        "country_code": "FK",
+        "dialing_code": "500",
+        "currency": "Pounds",
+        "code": "FKP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "40",
+        "country": "Fiji",
+        "country_code": "FJ",
+        "dialing_code": "679",
+        "currency": "Dollars",
+        "code": "FJD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "41",
+        "country": "France",
+        "country_code": "EU",
+        "dialing_code": "33",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "42",
+        "country": "Ghana",
+        "country_code": "GH",
+        "dialing_code": "233",
+        "currency": "Cedis",
+        "code": "GHS",
+        "symbol": "¢",
+        "price_rate": "5.78"
+    },
+    {
+        "id": "43",
+        "country": "Gibraltar",
+        "country_code": "GI",
+        "dialing_code": "350",
+        "currency": "Pounds",
+        "code": "GIP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "44",
+        "country": "Greece",
+        "country_code": "EU",
+        "dialing_code": "30",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "45",
+        "country": "Guatemala",
+        "country_code": "GT",
+        "dialing_code": "502",
+        "currency": "Quetzales",
+        "code": "GTQ",
+        "symbol": "Q",
+        "price_rate": "7.72"
+    },
+    {
+        "id": "46",
+        "country": "Guernsey",
+        "country_code": "GG",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "GGP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "47",
+        "country": "Guyana",
+        "country_code": "GY",
+        "dialing_code": "595",
+        "currency": "Dollars",
+        "code": "GYD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "48",
+        "country": "Holland (Netherlands)",
+        "country_code": "EU",
+        "dialing_code": "31",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "49",
+        "country": "Honduras",
+        "country_code": "HN",
+        "dialing_code": "504",
+        "currency": "Lempiras",
+        "code": "HNL",
+        "symbol": "L",
+        "price_rate": "24.02"
+    },
+    {
+        "id": "50",
+        "country": "Hong Kong",
+        "country_code": "HK",
+        "dialing_code": "852",
+        "currency": "Dollars",
+        "code": "HKD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "51",
+        "country": "Hungary",
+        "country_code": "HU",
+        "dialing_code": "36",
+        "currency": "Forint",
+        "code": "HUF",
+        "symbol": "Ft",
+        "price_rate": "309.12"
+    },
+    {
+        "id": "52",
+        "country": "Iceland",
+        "country_code": "IS",
+        "dialing_code": "354",
+        "currency": "Kronur",
+        "code": "ISK",
+        "symbol": "kr",
+        "price_rate": "127.70"
+    },
+    {
+        "id": "54",
+        "country": "Indonesia",
+        "country_code": "ID",
+        "dialing_code": "62",
+        "currency": "Rupiahs",
+        "code": "IDR",
+        "symbol": "Rp",
+        "price_rate": "14518.25"
+    },
+    {
+        "id": "55",
+        "country": "Iran",
+        "country_code": "IR",
+        "dialing_code": "98",
+        "currency": "Rials",
+        "code": "IRR",
+        "symbol": "﷼",
+        "price_rate": "42105.00"
+    },
+    {
+        "id": "56",
+        "country": "Ireland",
+        "country_code": "EU",
+        "dialing_code": "353",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "57",
+        "country": "Isle of Man",
+        "country_code": "IM",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "IMP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "58",
+        "country": "Israel",
+        "country_code": "IL",
+        "dialing_code": "972",
+        "currency": "New Shekels",
+        "code": "ILS",
+        "symbol": "₪",
+        "price_rate": "3.32"
+    },
+    {
+        "id": "59",
+        "country": "Italy",
+        "country_code": "EU",
+        "dialing_code": "39",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "60",
+        "country": "Jamaica",
+        "country_code": "JM",
+        "dialing_code": "1876",
+        "currency": "Dollars",
+        "code": "JMD",
+        "symbol": "J$",
+        "price_rate": "1"
+    },
+    {
+        "id": "61",
+        "country": "Japan",
+        "country_code": "JP",
+        "dialing_code": "81",
+        "currency": "Yen",
+        "code": "JPY",
+        "symbol": "¥",
+        "price_rate": "110.24"
+    },
+    {
+        "id": "62",
+        "country": "Jersey",
+        "country_code": "JE",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "JEP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "63",
+        "country": "Kazakhstan",
+        "country_code": "KZ",
+        "dialing_code": "77",
+        "currency": "Tenge",
+        "code": "KZT",
+        "symbol": "лв",
+        "price_rate": "424.47"
+    },
+    {
+        "id": "64",
+        "country": "Korea (North)",
+        "country_code": "KP",
+        "dialing_code": "850",
+        "currency": "Won",
+        "code": "KPW",
+        "symbol": "₩",
+        "price_rate": "1134.06"
+    },
+    {
+        "id": "65",
+        "country": "Korea (South)",
+        "country_code": "KR",
+        "dialing_code": "82",
+        "currency": "Won",
+        "code": "KRW",
+        "symbol": "₩",
+        "price_rate": "1134.06"
+    },
+    {
+        "id": "66",
+        "country": "Kyrgyzstan",
+        "country_code": "KG",
+        "dialing_code": "996",
+        "currency": "Soms",
+        "code": "KGS",
+        "symbol": "лв",
+        "price_rate": "84.78"
+    },
+    {
+        "id": "67",
+        "country": "Laos",
+        "country_code": "LA",
+        "dialing_code": "856",
+        "currency": "Kips",
+        "code": "LAK",
+        "symbol": "₭",
+        "price_rate": "9395.36"
+    },
+    {
+        "id": "68",
+        "country": "Latvia",
+        "country_code": "LV",
+        "dialing_code": "371",
+        "currency": "Lati",
+        "code": "LVL",
+        "symbol": "Ls",
+        "price_rate": "3.37987"
+    },
+    {
+        "id": "69",
+        "country": "Lebanon",
+        "country_code": "LB",
+        "dialing_code": "961",
+        "currency": "Pounds",
+        "code": "LBP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "70",
+        "country": "Liberia",
+        "country_code": "LR",
+        "dialing_code": "231",
+        "currency": "Dollars",
+        "code": "LRD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "71",
+        "country": "Liechtenstein",
+        "country_code": "LI",
+        "dialing_code": "423",
+        "currency": "Switzerland Francs",
+        "code": "CHF",
+        "symbol": "CHF",
+        "price_rate": "0.94"
+    },
+    {
+        "id": "72",
+        "country": "Lithuania",
+        "country_code": "LT",
+        "dialing_code": "370",
+        "currency": "Litai",
+        "code": "LTL",
+        "symbol": "Lt",
+        "price_rate": "2.93"
+    },
+    {
+        "id": "73",
+        "country": "Luxembourg",
+        "country_code": "EU",
+        "dialing_code": "352",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "74",
+        "country": "Macedonia",
+        "country_code": "MK",
+        "dialing_code": "389",
+        "currency": "Denars",
+        "code": "MKD",
+        "symbol": "ден",
+        "price_rate": "52.43"
+    },
+    {
+        "id": "75",
+        "country": "Malaysia",
+        "country_code": "MY",
+        "dialing_code": "60",
+        "currency": "Ringgits",
+        "code": "MYR",
+        "symbol": "RM",
+        "price_rate": "4.15"
+    },
+    {
+        "id": "76",
+        "country": "Malta",
+        "country_code": "EU",
+        "dialing_code": "356",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "77",
+        "country": "Mauritius",
+        "country_code": "MU",
+        "dialing_code": "230",
+        "currency": "Rupees",
+        "code": "MUR",
+        "symbol": "₨",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "78",
+        "country": "Mexico",
+        "country_code": "MX",
+        "dialing_code": "52",
+        "currency": "Pesos",
+        "code": "MXN",
+        "symbol": "$",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "79",
+        "country": "Mongolia",
+        "country_code": "MN",
+        "dialing_code": "976",
+        "currency": "Tugriks",
+        "code": "MNT",
+        "symbol": "₮",
+        "price_rate": "2850.6"
+    },
+    {
+        "id": "80",
+        "country": "Mozambique",
+        "country_code": "MZ",
+        "dialing_code": "258",
+        "currency": "Meticais",
+        "code": "MZN",
+        "symbol": "MT",
+        "price_rate": "69.96"
+    },
+    {
+        "id": "81",
+        "country": "Namibia",
+        "country_code": "NA",
+        "dialing_code": "264",
+        "currency": "Dollars",
+        "code": "NAD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "82",
+        "country": "Nepal",
+        "country_code": "NP",
+        "dialing_code": "977",
+        "currency": "Rupees",
+        "code": "NPR",
+        "symbol": "₨",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "83",
+        "country": "Netherlands Antilles",
+        "country_code": "AN",
+        "dialing_code": "599",
+        "currency": "Guilders",
+        "code": "ANG",
+        "symbol": "ƒ",
+        "price_rate": "1.80"
+    },
+    {
+        "id": "84",
+        "country": "Netherlands",
+        "country_code": "EU",
+        "dialing_code": "31",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "85",
+        "country": "New Zealand",
+        "country_code": "NZ",
+        "dialing_code": "64",
+        "currency": "Dollars",
+        "code": "NZD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "86",
+        "country": "Nicaragua",
+        "country_code": "NI",
+        "dialing_code": "505",
+        "currency": "Cordobas",
+        "code": "NIO",
+        "symbol": "C$",
+        "price_rate": "34.90"
+    },
+    {
+        "id": "87",
+        "country": "Nigeria",
+        "country_code": "NG",
+        "dialing_code": "234",
+        "currency": "Nairas",
+        "code": "NGN",
+        "symbol": "₦",
+        "price_rate": "380"
+    },
+    {
+        "id": "88",
+        "country": "North Korea",
+        "country_code": "KP",
+        "dialing_code": "850",
+        "currency": "Won",
+        "code": "KPW",
+        "symbol": "₩",
+        "price_rate": "1134.06"
+    },
+    {
+        "id": "89",
+        "country": "Norway",
+        "country_code": "NO",
+        "dialing_code": "47",
+        "currency": "Krone",
+        "code": "NOK",
+        "symbol": "kr",
+        "price_rate": "8.56"
+    },
+    {
+        "id": "90",
+        "country": "Oman",
+        "country_code": "OM",
+        "dialing_code": "968",
+        "currency": "Rials",
+        "code": "OMR",
+        "symbol": "﷼",
+        "price_rate": "42105.00"
+    },
+    {
+        "id": "91",
+        "country": "Pakistan",
+        "country_code": "PK",
+        "dialing_code": "92",
+        "currency": "Rupees",
+        "code": "PKR",
+        "symbol": "₨",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "92",
+        "country": "Panama",
+        "country_code": "PA",
+        "dialing_code": "507",
+        "currency": "Balboa",
+        "code": "PAB",
+        "symbol": "B/.",
+        "price_rate": "1"
+    },
+    {
+        "id": "93",
+        "country": "Paraguay",
+        "country_code": "PY",
+        "dialing_code": "595",
+        "currency": "Guarani",
+        "code": "PYG",
+        "symbol": "Gs",
+        "price_rate": "6445.24"
+    },
+    {
+        "id": "94",
+        "country": "Peru",
+        "country_code": "PE",
+        "dialing_code": "51",
+        "currency": "Nuevos Soles",
+        "code": "PEN",
+        "symbol": "S/.",
+        "price_rate": "3.73"
+    },
+    {
+        "id": "95",
+        "country": "Philippines",
+        "country_code": "PH",
+        "dialing_code": "63",
+        "currency": "Pesos",
+        "code": "PHP",
+        "symbol": "Php",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "96",
+        "country": "Poland",
+        "country_code": "PL",
+        "dialing_code": "48",
+        "currency": "Zlotych",
+        "code": "PLN",
+        "symbol": "zł",
+        "price_rate": "3.96"
+    },
+    {
+        "id": "97",
+        "country": "Qatar",
+        "country_code": "QA",
+        "dialing_code": "974",
+        "currency": "Rials",
+        "code": "QAR",
+        "symbol": "﷼",
+        "price_rate": "42105.00"
+    },
+    {
+        "id": "98",
+        "country": "Romania",
+        "country_code": "RO",
+        "dialing_code": "40",
+        "currency": "New Lei",
+        "code": "RON",
+        "symbol": "lei",
+        "price_rate": "4.18"
+    },
+    {
+        "id": "99",
+        "country": "Russia",
+        "country_code": "RU",
+        "dialing_code": "7",
+        "currency": "Rubles",
+        "code": "RUB",
+        "symbol": "руб",
+        "price_rate": "75.81"
+    },
+    {
+        "id": "100",
+        "country": "Saint Helena",
+        "country_code": "SH",
+        "dialing_code": "290",
+        "currency": "Pounds",
+        "code": "SHP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "101",
+        "country": "Saudi Arabia",
+        "country_code": "SA",
+        "dialing_code": "966",
+        "currency": "Riyals",
+        "code": "SAR",
+        "symbol": "﷼",
+        "price_rate": "3.75"
+    },
+    {
+        "id": "102",
+        "country": "Serbia",
+        "country_code": "RS",
+        "dialing_code": "381",
+        "currency": "Dinars",
+        "code": "RSD",
+        "symbol": "Дин",
+        "price_rate": "0.30"
+    },
+    {
+        "id": "103",
+        "country": "Seychelles",
+        "country_code": "SC",
+        "dialing_code": "248",
+        "currency": "Rupees",
+        "code": "SCR",
+        "symbol": "₨",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "104",
+        "country": "Singapore",
+        "country_code": "SG",
+        "dialing_code": "65",
+        "currency": "Dollars",
+        "code": "SGD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "105",
+        "country": "Slovenia",
+        "country_code": "EU",
+        "dialing_code": "386",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "106",
+        "country": "Solomon Islands",
+        "country_code": "SB",
+        "dialing_code": "677",
+        "currency": "Dollars",
+        "code": "SBD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "107",
+        "country": "Somalia",
+        "country_code": "SO",
+        "dialing_code": "252",
+        "currency": "Shillings",
+        "code": "SOS",
+        "symbol": "S",
+        "price_rate": "2318.50"
+    },
+    {
+        "id": "108",
+        "country": "South Africa",
+        "country_code": "ZA",
+        "dialing_code": "27",
+        "currency": "Rand",
+        "code": "ZAR",
+        "symbol": "R",
+        "price_rate": "14.93"
+    },
+    {
+        "id": "109",
+        "country": "South Korea",
+        "country_code": "KR",
+        "dialing_code": "82",
+        "currency": "Won",
+        "code": "KRW",
+        "symbol": "₩",
+        "price_rate": "1134.06"
+    },
+    {
+        "id": "110",
+        "country": "Spain",
+        "country_code": "EU",
+        "dialing_code": "34",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "111",
+        "country": "Sri Lanka",
+        "country_code": "LK",
+        "dialing_code": "94",
+        "currency": "Rupees",
+        "code": "LKR",
+        "symbol": "₨",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "112",
+        "country": "Sweden",
+        "country_code": "SE",
+        "dialing_code": "46",
+        "currency": "Kronor",
+        "code": "SEK",
+        "symbol": "kr",
+        "price_rate": "8.72"
+    },
+    {
+        "id": "113",
+        "country": "Switzerland",
+        "country_code": "CH",
+        "dialing_code": "41",
+        "currency": "Francs",
+        "code": "CHF",
+        "symbol": "CHF",
+        "price_rate": "0.94"
+    },
+    {
+        "id": "114",
+        "country": "Suriname",
+        "country_code": "SR",
+        "dialing_code": "597",
+        "currency": "Dollars",
+        "code": "SRD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "115",
+        "country": "Syria",
+        "country_code": "SY",
+        "dialing_code": "963",
+        "currency": "Pounds",
+        "code": "SYP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "116",
+        "country": "Taiwan",
+        "country_code": "TW",
+        "dialing_code": "886",
+        "currency": "New Dollars",
+        "code": "TWD",
+        "symbol": "NT$",
+        "price_rate": "28.50"
+    },
+    {
+        "id": "117",
+        "country": "Thailand",
+        "country_code": "TH",
+        "dialing_code": "66",
+        "currency": "Baht",
+        "code": "THB",
+        "symbol": "฿",
+        "price_rate": "31.25"
+    },
+    {
+        "id": "118",
+        "country": "Trinidad and Tobago",
+        "country_code": "TT",
+        "dialing_code": "1868",
+        "currency": "Dollars",
+        "code": "TTD",
+        "symbol": "TT$",
+        "price_rate": "1"
+    },
+    {
+        "id": "119",
+        "country": "Turkey",
+        "country_code": "TR",
+        "dialing_code": "90",
+        "currency": "Lira",
+        "code": "TRY",
+        "symbol": "TL",
+        "price_rate": "8.32"
+    },
+    {
+        "id": "120",
+        "country": "Turkey",
+        "country_code": "TR",
+        "dialing_code": "90",
+        "currency": "Liras",
+        "code": "TRL",
+        "symbol": "£",
+        "price_rate": "8.32"
+    },
+    {
+        "id": "121",
+        "country": "Tuvalu",
+        "country_code": "TV",
+        "dialing_code": "688",
+        "currency": "Dollars",
+        "code": "TVD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "122",
+        "country": "Ukraine",
+        "country_code": "UA",
+        "dialing_code": "380",
+        "currency": "Hryvnia",
+        "code": "UAH",
+        "symbol": "₴",
+        "price_rate": "27.99"
+    },
+    {
+        "id": "123",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "dialing_code": "44",
+        "currency": "Pounds",
+        "code": "GBP",
+        "symbol": "£",
+        "price_rate": "0.73"
+    },
+    {
+        "id": "124",
+        "country": "United States of America",
+        "country_code": "US",
+        "dialing_code": "1",
+        "currency": "Dollars",
+        "code": "USD",
+        "symbol": "$",
+        "price_rate": "1"
+    },
+    {
+        "id": "125",
+        "country": "Uruguay",
+        "country_code": "UY",
+        "dialing_code": "598",
+        "currency": "Pesos",
+        "code": "UYU",
+        "symbol": "$U",
+        "price_rate": "20.63"
+    },
+    {
+        "id": "126",
+        "country": "Uzbekistan",
+        "country_code": "UZ",
+        "dialing_code": "998",
+        "currency": "Sums",
+        "code": "UZS",
+        "symbol": "лв",
+        "price_rate": "10486.90"
+    },
+    {
+        "id": "127",
+        "country": "Vatican City",
+        "country_code": "EU",
+        "dialing_code": "379",
+        "currency": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "price_rate": "0.85"
+    },
+    {
+        "id": "128",
+        "country": "Venezuela",
+        "country_code": "VE",
+        "dialing_code": "58",
+        "currency": "Bolivares Fuertes",
+        "code": "VEF",
+        "symbol": "Bs",
+        "price_rate": "185"
+    },
+    {
+        "id": "129",
+        "country": "Vietnam",
+        "country_code": "VN",
+        "dialing_code": "84",
+        "currency": "Dong",
+        "code": "VND",
+        "symbol": "₫",
+        "price_rate": "23075.00"
+    },
+    {
+        "id": "130",
+        "country": "Yemen",
+        "country_code": "YE",
+        "dialing_code": "967",
+        "currency": "Rials",
+        "code": "YER",
+        "symbol": "﷼",
+        "price_rate": "42105.00"
+    },
+    {
+        "id": "131",
+        "country": "Zimbabwe",
+        "country_code": "ZW",
+        "dialing_code": "263",
+        "currency": "Zimbabwe Dollars",
+        "code": "ZWD",
+        "symbol": "Z$",
+        "price_rate": "361.9"
+    },
+    {
+        "id": "132",
+        "country": "India",
+        "country_code": "IN",
+        "dialing_code": "91",
+        "currency": "Rupees",
+        "code": "INR",
+        "symbol": "₹",
+        "price_rate": "72.79750"
+    },
+    {
+        "id": "134",
+        "country": "Kenya",
+        "country_code": "KE",
+        "dialing_code": "254",
+        "currency": "Kenya",
+        "code": "KES",
+        "symbol": "KSh",
+        "price_rate": "108.43"
+    },
+    {
+        "id": "135",
+        "country": "Gambian",
+        "country_code": "GM",
+        "dialing_code": "220",
+        "currency": "Gambian dalasi",
+        "code": "GMD",
+        "symbol": "D",
+        "price_rate": "51.10"
+    },
+    {
+        "id": "136",
+        "country": "Tanzania",
+        "country_code": "TZ",
+        "dialing_code": "255",
+        "currency": "Tanzanian shilling",
+        "code": "TZS",
+        "symbol": "TSh",
+        "price_rate": "3612.03"
+    },
+    {
+        "id": "137",
+        "country": "Sierra Leone",
+        "country_code": "SLL",
+        "dialing_code": "232",
+        "currency": "Sierra Leonean leone",
+        "code": "SLL",
+        "symbol": "Le",
+        "price_rate": "10200.00"
+    },
+    {
+        "id": "138",
+        "country": "Rwanda",
+        "country_code": "RWF",
+        "dialing_code": "250",
+        "currency": "Rwandan franc",
+        "code": "RWF",
+        "symbol": "FRw",
+        "price_rate": "1000.52"
+    },
+    {
+        "id": "139",
+        "country": "Uganda",
+        "country_code": "UG",
+        "dialing_code": "256",
+        "currency": "Ugandan shilling",
+        "code": "UG",
+        "symbol": "USh",
+        "price_rate": "3612.03"
+    }
+]

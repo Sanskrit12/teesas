@@ -1,0 +1,35 @@
+import { TableParents } from './TableParents';
+import { TableUserClassHistories } from './TableUserClassHistories';
+export declare class TableUsers {
+    id: string;
+    classId: string | null;
+    adate: string | null;
+    profile: string | null;
+    avtarIndex: string | null;
+    name: string;
+    countryCode: string;
+    mobile: string;
+    email: string;
+    gender: string | null;
+    birthday: string | null;
+    password: string;
+    passwordString: string | null;
+    countryId: string | null;
+    city: string;
+    location: string | null;
+    lat: string | null;
+    lang: string | null;
+    locationName: string | null;
+    socialId: string | null;
+    loginType: string | null;
+    profileType: string | null;
+    deviceType: string | null;
+    deviceToken: string | null;
+    deviceId: string | null;
+    lastVisit: string | null;
+    status: string;
+    createdAt: Date | null;
+    updatedAt: Date | null;
+    tableParents: TableParents[];
+    tableUserClassHistories: TableUserClassHistories[];
+}
