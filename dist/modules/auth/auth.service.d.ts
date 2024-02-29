@@ -1,8 +1,13 @@
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
 import { CheckEmailPhoneDTO, LoginDTO, RegisterDTO, ResetPasswordDTO, SendVerificationCodeDTO, SocialAuthDTO, VerifyTokenDTO } from './dto/auth.dto';
+<<<<<<< HEAD
+import { TblUser } from '../../models/entities/TblUser';
+import { TblParent } from '../../models/entities/TblParent';
+=======
 import { TblUser } from 'src/models/entities/TblUser';
 import { TblParent } from 'src/models/entities/TblParent';
+>>>>>>> parent of 3e45ce2 (add)
 import { Response } from '../../utils/response';
 import { UtilsHelperService } from '../utils/utils.helper.service';
 import { UtilsTimezoneService } from '../utils/utils.timezone.service';
