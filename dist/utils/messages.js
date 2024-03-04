@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.utils = exports.authMessages = void 0;
+exports.contentMessages = exports.utils = exports.authMessages = void 0;
 exports.authMessages = {
     userNotFound: 'User not found.',
     loginSuccessfully: 'User login successfully.',
@@ -32,5 +32,41 @@ exports.authMessages = {
 exports.utils = {
     countries_fetched: 'Countries fetched successfully',
     fileUploaded: 'File uploaded successfully',
+};
+exports.contentMessages = {
+    lessonsFetchSuccess: 'Lessons fetch successfully',
+    addFavoriteVideoSuccess: 'Add video in favorite successfully',
+    chaptersFetchSuccess: 'Chapters fetch successfully',
+    subjectFetchSuccess: 'Subjects fetch successfully',
+    testFetchSuccess: 'Test fetch successfully',
+    reportCardFetchSuccess: 'Report card fetch successfully',
+    leaderboardFetchSuccess: 'Leaderboard fetch successfully',
+    updatedLeaderboardSuccess: 'Leaderboard updated successfully',
+    mockTestFetchSuccess: 'Mock test fetch successfully',
+    updatedMockTestSuccess: 'Mock test updated successfully',
+    failedToFetchChapter: 'Failed to fetch chapter with this id ',
+    failedToFetchsubject: 'Failed to fetch subject',
+    failedToFetchLesson: 'Failed to fetch lesson',
+    failedToFetchTest: 'Failed to fetch test',
+    failedToStudent: 'Failed to fetch student',
+    failedToFetchUser: 'Failed to fetch user',
+    failedToFetchReportCard: 'Failed to fetch report card',
+    updatingLeaderboardFail: 'Failed to update leaderboard sessions',
+    checkingLeaderboard: 'error while fetching leaderboard.',
+    leaderboardNotFound: 'could not find leaderboard with id provided',
+    updatingLeaderboard: 'Error querying for updating leaderboard',
+    failedToFetchLeaderboard: 'Failed to fetch leaderboard',
+    failedToFetchMockTest: 'Failed to fetch mock test',
+    failedToFetchStudents: 'error while fetching students. ',
+    failedToFetchSubscription: 'No subscription found.',
+    checkingLesson: 'error while fetching lesson ',
+    saveReview: 'could not save new review ',
+    failedToFetchReview: 'Failed to fetch review',
+    updatingMockTestFail: 'Failed to update mock test',
+    checkingMockTest: 'error while fetching mock test.',
+    checkingTest: 'error while fetching  test.',
+    mockTestNotFound: 'could not find mock test with id provided',
+    failedToFetchTranscript: 'Failed to fetch transcript',
+    failedToFetchMaterial: 'Failed to fetch material',
 };
 //# sourceMappingURL=messages.js.map

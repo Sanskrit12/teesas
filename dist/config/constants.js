@@ -227,7 +227,7 @@ exports.ModuleConfigs = {
         ],
     },
     utils: {
-        entities: [CountryList_1.CountryList, TblUser_1.TblUser, TblCourses_1.TblCourses],
+        entities: [CountryList_1.CountryList, TblUser_1.TblUser, TblCourses_1.TblCourses, TblClassStandard_1.TblClassStandard],
     },
     auth: {
         entities: [TblUser_1.TblUser, TblParent_1.TblParent],

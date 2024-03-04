@@ -20,16 +20,20 @@ const utils_helper_service_1 = require("../utils/utils.helper.service");
 const CountryList_1 = require("../../models/entities/CountryList");
 const countries = require("../../utils/countries.json");
 const packages = require("../../utils/packages.json");
+const classes = require("../../utils/classStandard.json");
 const TblCourses_1 = require("../../models/entities/TblCourses");
+const TblClassStandard_1 = require("../../models/entities/TblClassStandard");
 let UtilsSeedersService = class UtilsSeedersService {
-    constructor(utilsHelperService, countriesRepo, coursesRepo) {
+    constructor(utilsHelperService, countriesRepo, coursesRepo, classRepo) {
         this.utilsHelperService = utilsHelperService;
         this.countriesRepo = countriesRepo;
         this.coursesRepo = coursesRepo;
+        this.classRepo = classRepo;
     }
     async onApplicationBootstrap() {
         await this.seedCountries();
         await this.seedCourses();
+        await this.seedClass();
     }
     async seedCountries() {
         const count = await this.countriesRepo.count();
@@ -61,13 +65,27 @@ let UtilsSeedersService = class UtilsSeedersService {
             await this.coursesRepo.save(data);
         }
     }
+    async seedClass() {
+        const count = await this.classRepo.count();
+        if (count == 0) {
+            const data = classes.map((item) => {
+                return {
+                    name: item.name,
+                    courseId: item.course_id,
+                };
+            });
+            await this.classRepo.save(data);
+        }
+    }
 };
 exports.UtilsSeedersService = UtilsSeedersService;
 exports.UtilsSeedersService = UtilsSeedersService = __decorate([
     (0, common_1.Injectable)(),
     __param(1, (0, typeorm_1.InjectRepository)(CountryList_1.CountryList)),
     __param(2, (0, typeorm_1.InjectRepository)(TblCourses_1.TblCourses)),
+    __param(3, (0, typeorm_1.InjectRepository)(TblClassStandard_1.TblClassStandard)),
     __metadata("design:paramtypes", [utils_helper_service_1.UtilsHelperService,
+        typeorm_2.Repository,
         typeorm_2.Repository,
         typeorm_2.Repository])
 ], UtilsSeedersService);

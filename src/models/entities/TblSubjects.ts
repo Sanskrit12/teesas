@@ -16,16 +16,20 @@ export class TblSubjects {
   @Column('varchar', { name: 'class_id', length: 255 })
   classId: string;
 
-  @Column('varchar', { name: 'icon_id', length: 255 })
+  @Column('varchar', { name: 'icon_id', length: 255, nullable: true })
   iconId: string;
 
-  @Column('varchar', { name: 'color_code_gradiant', length: 255 })
+  @Column('varchar', {
+    name: 'color_code_gradiant',
+    length: 255,
+    nullable: true,
+  })
   colorCodeGradiant: string;
 
-  @Column('varchar', { name: 'color_plat_id', length: 255 })
+  @Column('varchar', { name: 'color_plat_id', length: 255, nullable: true })
   colorPlatId: string;
 
-  @Column('int', { name: 's_no' })
+  @Column('int', { name: 's_no', nullable: true })
   sNo: number;
 
   @Column('timestamp', { name: 'created', default: () => 'CURRENT_TIMESTAMP' })

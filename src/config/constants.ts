@@ -225,7 +225,7 @@ export const ModuleConfigs = {
     ],
   },
   utils: {
-    entities: [CountryList, TblUser, TblCourses],
+    entities: [CountryList, TblUser, TblCourses, TblClassStandard],
   },
   auth: {
     entities: [TblUser, TblParent],

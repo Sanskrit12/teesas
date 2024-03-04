@@ -1,0 +1,62 @@
+[
+    {
+        "course_id": "1",
+        "name": "Reception"
+    },
+    {
+        "course_id": "2",
+        "name": "Nigerian Languages"
+    },
+    {
+        "course_id": "3",
+        "name": "British"
+    },
+    {
+        "course_id": "3",
+        "name": "Catholic"
+    },
+    {
+        "course_id": "3",
+        "name": "Military"
+    },
+    {
+        "course_id": "3",
+        "name": "National/Unity"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 1"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 2"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 3"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 4"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 5"
+    },
+    {
+        "course_id": "4",
+        "name": "Grade 6"
+    },
+    {
+        "course_id": "5",
+        "name": "7 Habits of Parent"
+    },
+    {
+        "course_id": "5",
+        "name": "7 Habits of Teens"
+    },    
+    {
+        "course_id": "5",
+        "name": "7 Habits of Happy Kids"
+    }
+]

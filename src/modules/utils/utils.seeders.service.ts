@@ -5,7 +5,9 @@ import { UtilsHelperService } from '../utils/utils.helper.service';
 import { CountryList } from 'src/models/entities/CountryList';
 import * as countries from '../../utils/countries.json';
 import * as packages from '../../utils/packages.json';
+import * as classes from '../../utils/classStandard.json';
 import { TblCourses } from 'src/models/entities/TblCourses';
+import { TblClassStandard } from 'src/models/entities/TblClassStandard';
 
 @Injectable()
 export class UtilsSeedersService implements OnApplicationBootstrap {
@@ -15,11 +17,14 @@ export class UtilsSeedersService implements OnApplicationBootstrap {
     private countriesRepo: Repository<CountryList>,
     @InjectRepository(TblCourses)
     private coursesRepo: Repository<TblCourses>,
+    @InjectRepository(TblClassStandard)
+    private classRepo: Repository<TblClassStandard>,
   ) {}
 
   async onApplicationBootstrap() {
     await this.seedCountries();
     await this.seedCourses();
+    await this.seedClass();
   }
 
   async seedCountries() {
@@ -51,6 +56,19 @@ export class UtilsSeedersService implements OnApplicationBootstrap {
         };
       });
       await this.coursesRepo.save(data);
+    }
+  }
+
+  async seedClass() {
+    const count = await this.classRepo.count();
+    if (count == 0) {
+      const data = classes.map((item) => {
+        return {
+          name: item.name,
+          courseId: item.course_id,
+        };
+      });
+      await this.classRepo.save(data);
     }
   }
 }
