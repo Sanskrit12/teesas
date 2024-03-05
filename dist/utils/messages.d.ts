@@ -25,6 +25,7 @@ export declare const authMessages: {
     incorrectOTP: string;
     checked: string;
     locationUpdate: string;
+    logOutSuccess: string;
 };
 export declare const utils: {
     countries_fetched: string;
@@ -65,4 +66,5 @@ export declare const contentMessages: {
     mockTestNotFound: string;
     failedToFetchTranscript: string;
     failedToFetchMaterial: string;
+    coursesFetched: string;
 };

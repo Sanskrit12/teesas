@@ -20,4 +20,5 @@ export declare class AuthService {
     verifyToken(verifyTokenDTO: VerifyTokenDTO): Promise<Response>;
     resetPassword(resetPasswordDTO: ResetPasswordDTO): Promise<Response>;
     checkEmailPhone(checkEmailPhoneDTO: CheckEmailPhoneDTO): Promise<Response>;
+    logOut(user_id: any): Promise<Response>;
 }

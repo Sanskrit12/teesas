@@ -7,10 +7,14 @@ import {
   Body,
   UseGuards,
   UsePipes,
+  Get,
+  Query,
 } from '@nestjs/common';
 import {
   GetCategorySubjectSchema,
   GetCategorySubjectDTO,
+  GetLPSchema,
+  GetLPDTO,
 } from 'src/modules/content/dto/content.dto';
 import { Request, Response } from 'express';
 import { ContentService } from 'src/modules/content/content.service';
@@ -20,6 +24,26 @@ import { Response as RestResponse } from '../../utils/response';
 @Controller('content')
 export class ContentController {
   constructor(private readonly contentService: ContentService) {}
+
+  @Get('learning-packages')
+  @UsePipes(new JoiValidationPipe(GetLPSchema))
+  async getLPackages(
+    @Req() req: Request,
+    @Res({ passthrough: true }) response: Response,
+    @Query() getLPDTO: GetLPDTO,
+  ) {
+    try {
+      const result = await this.contentService.getLearningPackages(getLPDTO);
+      response.status(result.status).json(result);
+    } catch (e) {
+      response.status(HttpStatus.BAD_REQUEST).json(
+        new RestResponse({
+          status: HttpStatus.BAD_REQUEST,
+          message: e.message,
+        }),
+      );
+    }
+  }
 
   @UseGuards(JwtAuthGuard)
   @Post('get-subjects-chapters')

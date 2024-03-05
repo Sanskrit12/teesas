@@ -1,19 +1,51 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import Logger from 'src/utils/logger';
 
-import { GetCategorySubjectDTO } from 'src/modules/content/dto/content.dto';
+import {
+  GetCategorySubjectDTO,
+  GetLPDTO,
+} from 'src/modules/content/dto/content.dto';
 import { contentMessages } from 'src/utils/messages';
 import { Response } from '../../utils/response';
 import { TblSubjects } from 'src/models/entities/TblSubjects';
+import { TblCourses } from 'src/models/entities/TblCourses';
 @Injectable()
 export class ContentService {
   constructor(
-    private jwtService: JwtService,
     @InjectRepository(TblSubjects) private subjectRepo: Repository<TblSubjects>,
+    @InjectRepository(TblCourses) private coursesRepo: Repository<TblCourses>,
   ) {}
+
+  async getLearningPackages(getLPDTO: GetLPDTO): Promise<Response> {
+    try {
+      const { id } = getLPDTO;
+      const foundPackages = await this.coursesRepo
+        .createQueryBuilder('course')
+        .leftJoin('course.class_standard', 'class_standard')
+        .where(id ? 'course.id = :id' : '1=1', {
+          id,
+        })
+        .select([
+          'course.id',
+          'course.priority',
+          'course.name',
+          'class_standard.id',
+          'class_standard.name',
+        ])
+        .orderBy('course.priority', 'ASC')
+        .getMany();
+
+      return new Response({
+        data: { packages: foundPackages },
+        message: contentMessages.coursesFetched,
+      });
+    } catch (e) {
+      Logger.error(e);
+      throw new BadRequestException(e.message);
+    }
+  }
 
   async getCategorySubject(
     user_id: string,
@@ -25,91 +57,89 @@ export class ContentService {
 
       const subjects = await this.subjectRepo
         .createQueryBuilder('subject')
-        .leftJoin('subject.learningPackage', 'learningPackage')
+        .leftJoin('subject.class_standard', 'class_standard')
         .leftJoin('subject.chapters', 'chapter')
-        .leftJoin('chapter.lessons', 'lesson')
-        .leftJoin('lesson.materials', 'material')
+        // .leftJoin('chapter.lessons', 'lesson')
+        // .leftJoin('lesson.materials', 'material')
         .select([
-          'subject.id as "subjectId"',
-          'subject.title as "title"',
-          'subject.mediaPath as "mediaPath"',
-          'learningPackage.name as "learningPackageName"',
+          'subject.id ',
+          'subject.name',
+          //'subject.mediaPath as "mediaPath"',
+          'class_standard.name',
           'COUNT(chapter.id) as "chapterCount"',
-          'COUNT(material.id) as "videoCount"',
+          //'COUNT(material.id) as "videoCount"',
         ])
-        .where('learningPackage.id IN (:...packageIds)', { packageIds })
-        .groupBy(
-          'subject.id, subject.title, subject.mediaPath, learningPackage.name',
-        )
+        .where('class_standard.id IN (:...packageIds)', { packageIds })
+        .groupBy('subject.id, subject.name,  class_standard.name') //subject.mediaPath,
         .getRawMany();
 
-      for (const subject of subjects) {
-        if (subject && subject.mediaPath) {
-          subject.mediaPath = await this.utilsService.createSignedURL(
-            subject.mediaPath,
-          );
-        }
+      // for (const subject of subjects) {
+      //   if (subject && subject.mediaPath) {
+      //     subject.mediaPath = await this.utilsService.createSignedURL(
+      //       subject.mediaPath,
+      //     );
+      //   }
 
-        const chapters = await this.chapterRepo.find({
-          where: {
-            subject: { id: subject.subjectId },
-          },
-        });
+      //   const chapters = await this.chapterRepo.find({
+      //     where: {
+      //       subject: { id: subject.subjectId },
+      //     },
+      //   });
 
-        let totalDuration = 0;
-        let totalCompletion = 0;
+      //   let totalDuration = 0;
+      //   let totalCompletion = 0;
 
-        for (const chapter of chapters) {
-          const lessons = await this.lessonRepo.find({
-            where: {
-              chapter: { id: chapter.id },
-            },
-          });
+      //   for (const chapter of chapters) {
+      //     const lessons = await this.lessonRepo.find({
+      //       where: {
+      //         chapter: { id: chapter.id },
+      //       },
+      //     });
 
-          for (const lesson of lessons) {
-            const materials = await this.materialRepo.findOne({
-              where: { lesson: { id: lesson.id } },
-            });
+      //     for (const lesson of lessons) {
+      //       const materials = await this.materialRepo.findOne({
+      //         where: { lesson: { id: lesson.id } },
+      //       });
 
-            totalDuration += materials ? materials.duration : 0;
+      //       totalDuration += materials ? materials.duration : 0;
 
-            const learningJourney = await this.learningJourneyRepo.findOne({
-              where: {
-                lesson: { id: lesson.id },
-                chapter: { id: chapter.id },
-                subject: { id: subject.subjectId },
-              },
-            });
+      //       const learningJourney = await this.learningJourneyRepo.findOne({
+      //         where: {
+      //           lesson: { id: lesson.id },
+      //           chapter: { id: chapter.id },
+      //           subject: { id: subject.subjectId },
+      //         },
+      //       });
 
-            totalCompletion += learningJourney
-              ? learningJourney.videoCompletion
-              : 0;
-          }
-        }
+      //       totalCompletion += learningJourney
+      //         ? learningJourney.videoCompletion
+      //         : 0;
+      //     }
+      //   }
 
-        subject['completionInPercentage'] =
-          totalCompletion !== 0 ? (totalCompletion / totalDuration) * 100 : 0;
-      }
+      //   subject['completionInPercentage'] =
+      //     totalCompletion !== 0 ? (totalCompletion / totalDuration) * 100 : 0;
+      // }
 
-      const packageNames = subjects.reduce((result, subject) => {
-        const existingItem = result.find(
-          (item) => item.learningPackageName === subject.learningPackageName,
-        );
+      // const packageNames = subjects.reduce((result, subject) => {
+      //   const existingItem = result.find(
+      //     (item) => item.learningPackageName === subject.learningPackageName,
+      //   );
 
-        if (existingItem) {
-          existingItem.subjects.push(subject);
-        } else {
-          result.push({
-            learningPackageName: subject.learningPackageName,
-            subjects: [subject],
-          });
-        }
+      //   if (existingItem) {
+      //     existingItem.subjects.push(subject);
+      //   } else {
+      //     result.push({
+      //       learningPackageName: subject.learningPackageName,
+      //       subjects: [subject],
+      //     });
+      //   }
 
-        return result;
-      }, []);
+      //   return result;
+      // }, []);
 
       return new Response({
-        data: { packageNames },
+        data: { subjects },
         message: contentMessages.subjectFetchSuccess,
       });
     } catch (e) {

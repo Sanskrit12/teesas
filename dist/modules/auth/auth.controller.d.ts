@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { Response, Request } from 'express';
 import { AuthService } from './auth.service';
 import { RegisterDTO, SocialAuthDTO, LoginDTO, SendVerificationCodeDTO, VerifyTokenDTO, ResetPasswordDTO, CheckEmailPhoneDTO } from 'src/modules/auth/dto/auth.dto';
 export declare class AuthController {
@@ -11,4 +11,5 @@ export declare class AuthController {
     verifyToken(response: Response, verifyTokenDTO: VerifyTokenDTO): Promise<void>;
     resetPassword(resetPasswordDTO: ResetPasswordDTO, response: Response): Promise<void>;
     checkEmailPhone(response: Response, checkEmailPhoneDTO: CheckEmailPhoneDTO): Promise<void>;
+    logOut(response: Response, request: Request): Promise<void>;
 }

@@ -1,7 +1,10 @@
+import { TblClassStandard } from './TblClassStandard';
+import { TblChapter } from './TblChapter';
 export declare class TblSubjects {
     id: number;
     name: string;
-    classId: string;
+    class_standard: TblClassStandard;
+    chapters?: TblChapter;
     iconId: string;
     colorCodeGradiant: string;
     colorPlatId: string;

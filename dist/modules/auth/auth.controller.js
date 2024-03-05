@@ -18,6 +18,7 @@ const auth_service_1 = require("./auth.service");
 const auth_dto_1 = require("./dto/auth.dto");
 const joi_validation_pipe_1 = require("../../utils/joi.validation.pipe");
 const response_1 = require("../../utils/response");
+const jwt_guard_1 = require("../../utils/jwt.guard");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
@@ -106,6 +107,19 @@ let AuthController = class AuthController {
             }));
         }
     }
+    async logOut(response, request) {
+        try {
+            const user = request['user'];
+            const result = await this.authService.logOut(user.id);
+            response.status(result.status).json(result);
+        }
+        catch (e) {
+            response.status(common_1.HttpStatus.BAD_REQUEST).json(new response_1.Response({
+                status: common_1.HttpStatus.BAD_REQUEST,
+                message: e.message,
+            }));
+        }
+    }
 };
 exports.AuthController = AuthController;
 __decorate([
@@ -171,6 +185,16 @@ __decorate([
     __metadata("design:paramtypes", [Object, auth_dto_1.CheckEmailPhoneDTO]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "checkEmailPhone", null);
+__decorate([
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    (0, common_1.Get)('log-out'),
+    (0, common_1.UsePipes)(),
+    __param(0, (0, common_1.Res)({ passthrough: true })),
+    __param(1, (0, common_1.Req)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "logOut", null);
 exports.AuthController = AuthController = __decorate([
     (0, common_1.Controller)('auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])

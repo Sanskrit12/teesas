@@ -26,6 +26,7 @@ export const authMessages = {
   incorrectOTP: 'Incorrect OTP entered',
   checked: 'Checked',
   locationUpdate: 'Location updated successfully.',
+  logOutSuccess: 'Log out successfully',
 };
 
 export const utils = {
@@ -68,4 +69,5 @@ export const contentMessages = {
   mockTestNotFound: 'could not find mock test with id provided',
   failedToFetchTranscript: 'Failed to fetch transcript',
   failedToFetchMaterial: 'Failed to fetch material',
+  coursesFetched: 'Courses Fetched Successfully',
 };

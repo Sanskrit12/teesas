@@ -1,6 +1,16 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { TblClassStandard } from './TblClassStandard';
+import { TblChapter } from './TblChapter';
 
-@Index('class_id', ['classId'], {})
+//@Index('class_id', ['classId'], {})
 @Index('color_plat_id', ['colorPlatId'], {})
 @Index('icon_id', ['iconId'], {})
 @Index('id', ['id'], {})
@@ -13,8 +23,18 @@ export class TblSubjects {
   @Column('varchar', { name: 'name', length: 255 })
   name: string;
 
-  @Column('varchar', { name: 'class_id', length: 255 })
-  classId: string;
+  @ManyToOne(
+    () => TblClassStandard,
+    (class_standard) => class_standard.subjects,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  @JoinColumn({ name: 'class_id' })
+  class_standard: TblClassStandard;
+
+  @OneToMany(() => TblChapter, (chapters) => chapters.subjects)
+  chapters?: TblChapter;
 
   @Column('varchar', { name: 'icon_id', length: 255, nullable: true })
   iconId: string;

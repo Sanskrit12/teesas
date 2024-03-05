@@ -225,9 +225,19 @@ export const ModuleConfigs = {
     ],
   },
   utils: {
-    entities: [CountryList, TblUser, TblCourses, TblClassStandard],
+    entities: [
+      CountryList,
+      TblUser,
+      TblCourses,
+      TblClassStandard,
+      TblSubjects,
+      TblChapter,
+    ],
   },
   auth: {
     entities: [TblUser, TblParent],
+  },
+  content: {
+    entities: [TblSubjects, TblCourses],
   },
 };

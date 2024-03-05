@@ -28,6 +28,7 @@ exports.authMessages = {
     incorrectOTP: 'Incorrect OTP entered',
     checked: 'Checked',
     locationUpdate: 'Location updated successfully.',
+    logOutSuccess: 'Log out successfully',
 };
 exports.utils = {
     countries_fetched: 'Countries fetched successfully',
@@ -68,5 +69,6 @@ exports.contentMessages = {
     mockTestNotFound: 'could not find mock test with id provided',
     failedToFetchTranscript: 'Failed to fetch transcript',
     failedToFetchMaterial: 'Failed to fetch material',
+    coursesFetched: 'Courses Fetched Successfully',
 };
 //# sourceMappingURL=messages.js.map

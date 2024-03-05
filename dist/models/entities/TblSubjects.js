@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TblSubjects = void 0;
 const typeorm_1 = require("typeorm");
+const TblClassStandard_1 = require("./TblClassStandard");
+const TblChapter_1 = require("./TblChapter");
 let TblSubjects = class TblSubjects {
 };
 exports.TblSubjects = TblSubjects;
@@ -23,23 +25,34 @@ __decorate([
     __metadata("design:type", String)
 ], TblSubjects.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'class_id', length: 255 }),
-    __metadata("design:type", String)
-], TblSubjects.prototype, "classId", void 0);
+    (0, typeorm_1.ManyToOne)(() => TblClassStandard_1.TblClassStandard, (class_standard) => class_standard.subjects, {
+        onDelete: 'CASCADE',
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'class_id' }),
+    __metadata("design:type", TblClassStandard_1.TblClassStandard)
+], TblSubjects.prototype, "class_standard", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'icon_id', length: 255 }),
+    (0, typeorm_1.OneToMany)(() => TblChapter_1.TblChapter, (chapters) => chapters.subjects),
+    __metadata("design:type", TblChapter_1.TblChapter)
+], TblSubjects.prototype, "chapters", void 0);
+__decorate([
+    (0, typeorm_1.Column)('varchar', { name: 'icon_id', length: 255, nullable: true }),
     __metadata("design:type", String)
 ], TblSubjects.prototype, "iconId", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'color_code_gradiant', length: 255 }),
+    (0, typeorm_1.Column)('varchar', {
+        name: 'color_code_gradiant',
+        length: 255,
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], TblSubjects.prototype, "colorCodeGradiant", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'color_plat_id', length: 255 }),
+    (0, typeorm_1.Column)('varchar', { name: 'color_plat_id', length: 255, nullable: true }),
     __metadata("design:type", String)
 ], TblSubjects.prototype, "colorPlatId", void 0);
 __decorate([
-    (0, typeorm_1.Column)('int', { name: 's_no' }),
+    (0, typeorm_1.Column)('int', { name: 's_no', nullable: true }),
     __metadata("design:type", Number)
 ], TblSubjects.prototype, "sNo", void 0);
 __decorate([
@@ -47,7 +60,6 @@ __decorate([
     __metadata("design:type", Date)
 ], TblSubjects.prototype, "created", void 0);
 exports.TblSubjects = TblSubjects = __decorate([
-    (0, typeorm_1.Index)('class_id', ['classId'], {}),
     (0, typeorm_1.Index)('color_plat_id', ['colorPlatId'], {}),
     (0, typeorm_1.Index)('icon_id', ['iconId'], {}),
     (0, typeorm_1.Index)('id', ['id'], {}),

@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TblClassStandard = void 0;
 const typeorm_1 = require("typeorm");
+const TblCourses_1 = require("./TblCourses");
+const TblSubjects_1 = require("./TblSubjects");
 let TblClassStandard = class TblClassStandard {
 };
 exports.TblClassStandard = TblClassStandard;
@@ -19,9 +21,16 @@ __decorate([
     __metadata("design:type", Number)
 ], TblClassStandard.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'course_id', length: 255 }),
-    __metadata("design:type", String)
-], TblClassStandard.prototype, "courseId", void 0);
+    (0, typeorm_1.ManyToOne)(() => TblCourses_1.TblCourses, (courses) => courses.class_standard, {
+        onDelete: 'CASCADE',
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'course_id' }),
+    __metadata("design:type", TblCourses_1.TblCourses)
+], TblClassStandard.prototype, "courses", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => TblSubjects_1.TblSubjects, (subjects) => subjects.class_standard),
+    __metadata("design:type", TblSubjects_1.TblSubjects)
+], TblClassStandard.prototype, "subjects", void 0);
 __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'name', length: 255 }),
     __metadata("design:type", String)
@@ -31,7 +40,6 @@ __decorate([
     __metadata("design:type", Date)
 ], TblClassStandard.prototype, "created", void 0);
 exports.TblClassStandard = TblClassStandard = __decorate([
-    (0, typeorm_1.Index)('course_id', ['courseId'], {}),
     (0, typeorm_1.Index)('id', ['id'], {}),
     (0, typeorm_1.Entity)('tbl_class_standard', { schema: 'teesas' })
 ], TblClassStandard);

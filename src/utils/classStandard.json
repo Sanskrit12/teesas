@@ -1,62 +1,167 @@
 [
     {
-        "course_id": "1",
-        "name": "Reception"
+        "course_id": 1,
+        "name": "Reception",
+        "subject_name": "General Studies",
+        "chapters": [
+            {"chapter_name": "Introduction"},
+            {"chapter_name": "Basic Communication Skills"},
+            {"chapter_name": "Social Interaction"},
+            {"chapter_name": "Creative Expression"}
+        ]
     },
     {
-        "course_id": "2",
-        "name": "Nigerian Languages"
+        "course_id": 2,
+        "name": "Nigerian Languages",
+        "subject_name": "Language Studies",
+        "chapters": [
+            {"chapter_name": "Introduction to Nigerian Languages"},
+            {"chapter_name": "Yoruba Language"},
+            {"chapter_name": "Igbo Language"},
+            {"chapter_name": "Hausa Language"}
+        ]
     },
     {
-        "course_id": "3",
-        "name": "British"
+        "course_id": 3,
+        "name": "British",
+        "subject_name": "History",
+        "chapters": [
+            {"chapter_name": "Introduction to British History"},
+            {"chapter_name": "Victorian Era"},
+            {"chapter_name": "World War I"},
+            {"chapter_name": "World War II"}
+        ]
     },
     {
-        "course_id": "3",
-        "name": "Catholic"
+        "course_id": 3,
+        "name": "Catholic",
+        "subject_name": "Religious Studies",
+        "chapters": [
+            {"chapter_name": "Introduction to Catholicism"},
+            {"chapter_name": "Sacraments"},
+            {"chapter_name": "Catholic Saints"},
+            {"chapter_name": "Catholic Moral Teachings"}
+        ]
     },
     {
-        "course_id": "3",
-        "name": "Military"
+        "course_id": 3,
+        "name": "Military",
+        "subject_name": "Military History",
+        "chapters": [
+            {"chapter_name": "Ancient Warfare"},
+            {"chapter_name": "Medieval Warfare"},
+            {"chapter_name": "Modern Warfare"},
+            {"chapter_name": "Warfare Strategies"}
+        ]
     },
     {
-        "course_id": "3",
-        "name": "National/Unity"
+        "course_id": 3,
+        "name": "National/Unity",
+        "subject_name": "Politics",
+        "chapters": [
+            {"chapter_name": "Introduction to National Unity"},
+            {"chapter_name": "Political Ideologies"},
+            {"chapter_name": "Nation Building"},
+            {"chapter_name": "Unity in Diversity"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 1"
+        "course_id": 4,
+        "name": "Grade 1",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Mathematics Basics"},
+            {"chapter_name": "Language Arts"},
+            {"chapter_name": "Science Fundamentals"},
+            {"chapter_name": "Social Studies Intro"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 2"
+        "course_id": 4,
+        "name": "Grade 2",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Advanced Mathematics"},
+            {"chapter_name": "Reading Comprehension"},
+            {"chapter_name": "Exploring Nature"},
+            {"chapter_name": "Community Studies"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 3"
+        "course_id": 4,
+        "name": "Grade 3",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Multiplication and Division"},
+            {"chapter_name": "Writing Skills"},
+            {"chapter_name": "Environmental Science"},
+            {"chapter_name": "Civics Education"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 4"
+        "course_id": 4,
+        "name": "Grade 4",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Fractions and Decimals"},
+            {"chapter_name": "Grammar and Composition"},
+            {"chapter_name": "Physical Sciences"},
+            {"chapter_name": "Geography"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 5"
+        "course_id": 4,
+        "name": "Grade 5",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Algebra Basics"},
+            {"chapter_name": "Literature Studies"},
+            {"chapter_name": "Life Sciences"},
+            {"chapter_name": "World History"}
+        ]
     },
     {
-        "course_id": "4",
-        "name": "Grade 6"
+        "course_id": 4,
+        "name": "Grade 6",
+        "subject_name": "Primary Education",
+        "chapters": [
+            {"chapter_name": "Geometry"},
+            {"chapter_name": "Creative Writing"},
+            {"chapter_name": "Earth Sciences"},
+            {"chapter_name": "Cultural Studies"}
+        ]
     },
     {
-        "course_id": "5",
-        "name": "7 Habits of Parent"
+        "course_id": 5,
+        "name": "7 Habits of Parent",
+        "subject_name": "Self-Improvement",
+        "chapters": [
+            {"chapter_name": "Understanding Parenting Styles"},
+            {"chapter_name": "Effective Communication with Children"},
+            {"chapter_name": "Building Healthy Relationships"},
+            {"chapter_name": "Managing Parental Stress"}
+        ]
     },
     {
-        "course_id": "5",
-        "name": "7 Habits of Teens"
+        "course_id": 5,
+        "name": "7 Habits of Teens",
+        "subject_name": "Self-Improvement",
+        "chapters": [
+            {"chapter_name": "Teenage Psychology"},
+            {"chapter_name": "Personal Goal Setting"},
+            {"chapter_name": "Peer Pressure and Decision Making"},
+            {"chapter_name": "Developing Leadership Skills"}
+        ]
     },    
     {
-        "course_id": "5",
-        "name": "7 Habits of Happy Kids"
+        "course_id": 5,
+        "name": "7 Habits of Happy Kids",
+        "subject_name": "Child Development",
+        "chapters": [
+            {"chapter_name": "Emotional Intelligence in Children"},
+            {"chapter_name": "Positive Parent-Child Interactions"},
+            {"chapter_name": "Encouraging Responsibility and Independence"},
+            {"chapter_name": "Nurturing Confidence and Self-Esteem"}
+        ]
     }
 ]

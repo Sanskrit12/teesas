@@ -1,12 +1,15 @@
 import {
   Body,
   Controller,
+  Get,
   HttpStatus,
   Post,
+  Req,
   Res,
+  UseGuards,
   UsePipes,
 } from '@nestjs/common';
-import { Response } from 'express';
+import { Response, Request } from 'express';
 import { AuthService } from './auth.service';
 import {
   RegisterSchema,
@@ -26,6 +29,7 @@ import {
 } from 'src/modules/auth/dto/auth.dto';
 import { JoiValidationPipe } from 'src/utils/joi.validation.pipe';
 import { Response as RestResponse } from '../../utils/response';
+import { JwtAuthGuard } from 'src/utils/jwt.guard';
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
@@ -162,6 +166,27 @@ export class AuthController {
   ) {
     try {
       const result = await this.authService.checkEmailPhone(checkEmailPhoneDTO);
+      response.status(result.status).json(result);
+    } catch (e) {
+      response.status(HttpStatus.BAD_REQUEST).json(
+        new RestResponse({
+          status: HttpStatus.BAD_REQUEST,
+          message: e.message,
+        }),
+      );
+    }
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('log-out')
+  @UsePipes()
+  async logOut(
+    @Res({ passthrough: true }) response: Response,
+    @Req() request: Request,
+  ) {
+    try {
+      const user = request['user'];
+      const result = await this.authService.logOut(user.id);
       response.status(result.status).json(result);
     } catch (e) {
       response.status(HttpStatus.BAD_REQUEST).json(

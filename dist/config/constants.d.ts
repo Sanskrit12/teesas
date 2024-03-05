@@ -31,9 +31,9 @@ import { TblContent } from 'src/models/entities/TblContent';
 import { TblCountry } from 'src/models/entities/TblCountry';
 import { TblCourses } from 'src/models/entities/TblCourses';
 import { TblDonation } from 'src/models/entities/TblDonation';
+import { TblDownloadSample } from 'src/models/entities/TblDownloadSample';
 import { TblEbbokComment } from 'src/models/entities/TblEbbokComment';
 import { TblEbook } from 'src/models/entities/TblEbook';
-import { TblEbookOrder } from 'src/models/entities/TblEbookOrder';
 import { TblEbookRating } from 'src/models/entities/TblEbookRating';
 import { TblEmailStore } from 'src/models/entities/TblEmailStore';
 import { TblIcon } from 'src/models/entities/TblIcon';
@@ -86,12 +86,15 @@ import { TblVoucher } from 'src/models/entities/TblVoucher';
 import { TrackNumber } from 'src/models/entities/TrackNumber';
 export declare const ModuleConfigs: {
     app: {
-        entities: (typeof TblAboutUs | typeof TblAddUserSubscription | typeof TblVoucher | typeof TblTransaction | typeof TrackNumber | typeof TblUserReportQuestion | typeof TblUserPayment | typeof TblUserPromo | typeof TblUserPracticeHistory | typeof TblUserHistory | typeof TblUserFeedback | typeof TblUserClassHistory | typeof TblUserBadges | typeof TblTopics | typeof TblToken | typeof TblTestType | typeof TblTeacherNotification | typeof TblTabletVoucher | typeof TblTabletVoucherUsed | typeof TblSubscriptionTime | typeof TblSubscriptionText | typeof TblSubscription | typeof TblSubjects | typeof TblStoreRecentview | typeof TblStoreHomebanner | typeof TblStoreDeliveryaddresses | typeof TblSpendTime | typeof TblSession | typeof TblSalesUser | typeof TblReportType | typeof TblReportData | typeof TblQuestionTestHistory | typeof TblQuestionPracticeHistory | typeof TblQuestion | typeof TblPromoCode | typeof TblPractice | typeof TblPicuplocations | typeof TblPasswordToken | typeof TblParentReport | typeof TblParentFeedback | typeof TblOptions | typeof TblMulticourseList | typeof TblLiveclassChats | typeof TblLiveclassUser | typeof TblIndomievoucher | typeof TblIcon | typeof TblEmailStore | typeof TblEbookRating | typeof TblEbookOrder | typeof TblEbook | typeof TblEbbokComment | typeof TblDonation | typeof TblCourses | typeof TblCountry | typeof TblContent | typeof TblContact | typeof TblColorPlats | typeof TblClassStandard | typeof TblChapter | typeof TblCart | typeof TblCardDetails | typeof TblBookmarks | typeof TblBanner | typeof TblBankDetails | typeof TblApplyVoucher | typeof TblProductimages | typeof TblProductcolors | typeof TableUsers | typeof TableUserClassHistories | typeof TableParents | typeof Stores | typeof States | typeof Roles | typeof QuestionOptions | typeof Orders | typeof OrderAddresses | typeof Migrations | typeof GeoZones | typeof FailedJobs | typeof CountryList | typeof Countries | typeof Cities | typeof Adminchats | typeof AdminSupport)[];
+        entities: (typeof AdminSupport | typeof Adminchats | typeof Countries | typeof States | typeof Cities | typeof CountryList | typeof FailedJobs | typeof GeoZones | typeof Migrations | typeof OrderAddresses | typeof Orders | typeof QuestionOptions | typeof Roles | typeof Stores | typeof TableUserClassHistories | typeof TableUsers | typeof TableParents | typeof TblAboutUs | typeof TblAddUserSubscription | typeof TblApplyVoucher | typeof TblBankDetails | typeof TblBanner | typeof TblBookmarks | typeof TblCardDetails | typeof TblCart | typeof TblCourses | typeof TblClassStandard | typeof TblSubjects | typeof TblChapter | typeof TblColorPlats | typeof TblContact | typeof TblContent | typeof TblCountry | typeof TblDonation | typeof TblDownloadSample | typeof TblEbbokComment | typeof TblEbook | typeof TblEbookRating | typeof TblEmailStore | typeof TblIcon | typeof TblIndomievoucher | typeof TblLiveclassChats | typeof TblLiveclassUser | typeof TblMulticourseList | typeof TblOptions | typeof TblParentFeedback | typeof TblParentReport | typeof TblPasswordToken | typeof TblPicuplocations | typeof TblPractice | typeof TblProductcolors | typeof TblProductimages | typeof TblPromoCode | typeof TblQuestion | typeof TblQuestionPracticeHistory | typeof TblQuestionTestHistory | typeof TblReportData | typeof TblReportType | typeof TblSalesUser | typeof TblSession | typeof TblSpendTime | typeof TblStoreDeliveryaddresses | typeof TblStoreHomebanner | typeof TblStoreRecentview | typeof TblSubscription | typeof TblSubscriptionText | typeof TblSubscriptionTime | typeof TblTabletVoucher | typeof TblTabletVoucherUsed | typeof TblTeacherNotification | typeof TblTestType | typeof TblToken | typeof TblTopics | typeof TblTransaction | typeof TblUserBadges | typeof TblUserClassHistory | typeof TblUserFeedback | typeof TblUserHistory | typeof TblUserPayment | typeof TblUserPracticeHistory | typeof TblUserPromo | typeof TblUserReportQuestion | typeof TblVoucher | typeof TrackNumber)[];
     };
     utils: {
-        entities: (typeof TblUser | typeof TblCourses | typeof TblClassStandard | typeof CountryList)[];
+        entities: (typeof CountryList | typeof TblCourses | typeof TblClassStandard | typeof TblSubjects | typeof TblChapter | typeof TblUser)[];
     };
     auth: {
-        entities: (typeof TblUser | typeof TblParent)[];
+        entities: (typeof TblParent | typeof TblUser)[];
+    };
+    content: {
+        entities: (typeof TblCourses | typeof TblSubjects)[];
     };
 };

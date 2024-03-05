@@ -227,10 +227,20 @@ exports.ModuleConfigs = {
         ],
     },
     utils: {
-        entities: [CountryList_1.CountryList, TblUser_1.TblUser, TblCourses_1.TblCourses, TblClassStandard_1.TblClassStandard],
+        entities: [
+            CountryList_1.CountryList,
+            TblUser_1.TblUser,
+            TblCourses_1.TblCourses,
+            TblClassStandard_1.TblClassStandard,
+            TblSubjects_1.TblSubjects,
+            TblChapter_1.TblChapter,
+        ],
     },
     auth: {
         entities: [TblUser_1.TblUser, TblParent_1.TblParent],
+    },
+    content: {
+        entities: [TblSubjects_1.TblSubjects, TblCourses_1.TblCourses],
     },
 };
 //# sourceMappingURL=constants.js.map

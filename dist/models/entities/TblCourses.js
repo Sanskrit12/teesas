@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TblCourses = void 0;
 const typeorm_1 = require("typeorm");
+const TblClassStandard_1 = require("./TblClassStandard");
 let TblCourses = class TblCourses {
 };
 exports.TblCourses = TblCourses;
@@ -22,6 +23,10 @@ __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'name', length: 255 }),
     __metadata("design:type", String)
 ], TblCourses.prototype, "name", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => TblClassStandard_1.TblClassStandard, (class_standard) => class_standard.courses),
+    __metadata("design:type", TblClassStandard_1.TblClassStandard)
+], TblCourses.prototype, "class_standard", void 0);
 __decorate([
     (0, typeorm_1.Column)('int', { name: 'country_id' }),
     __metadata("design:type", Number)

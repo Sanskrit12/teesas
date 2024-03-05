@@ -1,4 +1,11 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { TblClassStandard } from './TblClassStandard';
 
 @Index('country_id', ['countryId'], {})
 @Index('id', ['id'], {})
@@ -9,6 +16,9 @@ export class TblCourses {
 
   @Column('varchar', { name: 'name', length: 255 })
   name: string;
+
+  @OneToMany(() => TblClassStandard, (class_standard) => class_standard.courses)
+  class_standard?: TblClassStandard;
 
   @Column('int', { name: 'country_id' })
   countryId: number;

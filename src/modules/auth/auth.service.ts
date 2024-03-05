@@ -308,4 +308,31 @@ export class AuthService {
       throw new BadRequestException(e.message);
     }
   }
+
+  async logOut(user_id): Promise<Response> {
+    try {
+      const user = await this.userRepo.findOne({
+        where: {
+          id: user_id,
+        },
+      });
+
+      if (!user) {
+        throw new BadRequestException(authMessages.userNotFound);
+      }
+
+      await this.userRepo.save({
+        id: user_id,
+        device_token: null,
+      });
+
+      return new Response({
+        data: {},
+        message: authMessages.logOutSuccess,
+      });
+    } catch (e) {
+      Logger.error(e);
+      throw new BadRequestException(e.message);
+    }
+  }
 }

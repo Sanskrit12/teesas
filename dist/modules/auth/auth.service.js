@@ -300,6 +300,30 @@ let AuthService = class AuthService {
             throw new common_1.BadRequestException(e.message);
         }
     }
+    async logOut(user_id) {
+        try {
+            const user = await this.userRepo.findOne({
+                where: {
+                    id: user_id,
+                },
+            });
+            if (!user) {
+                throw new common_1.BadRequestException(messages_1.authMessages.userNotFound);
+            }
+            await this.userRepo.save({
+                id: user_id,
+                device_token: null,
+            });
+            return new response_1.Response({
+                data: {},
+                message: messages_1.authMessages.logOutSuccess,
+            });
+        }
+        catch (e) {
+            logger_1.default.error(e);
+            throw new common_1.BadRequestException(e.message);
+        }
+    }
 };
 exports.AuthService = AuthService;
 exports.AuthService = AuthService = __decorate([

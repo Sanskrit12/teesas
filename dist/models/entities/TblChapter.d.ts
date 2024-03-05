@@ -1,7 +1,8 @@
+import { TblSubjects } from './TblSubjects';
 export declare class TblChapter {
     id: number;
-    subjectId: string;
-    chapterName: string;
+    subjects: TblSubjects;
+    name: string;
     sNo: number;
     created: Date;
 }

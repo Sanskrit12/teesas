@@ -23,12 +23,16 @@ const packages = require("../../utils/packages.json");
 const classes = require("../../utils/classStandard.json");
 const TblCourses_1 = require("../../models/entities/TblCourses");
 const TblClassStandard_1 = require("../../models/entities/TblClassStandard");
+const TblSubjects_1 = require("../../models/entities/TblSubjects");
+const TblChapter_1 = require("../../models/entities/TblChapter");
 let UtilsSeedersService = class UtilsSeedersService {
-    constructor(utilsHelperService, countriesRepo, coursesRepo, classRepo) {
+    constructor(utilsHelperService, countriesRepo, coursesRepo, classRepo, subjectRepo, chapterRepo) {
         this.utilsHelperService = utilsHelperService;
         this.countriesRepo = countriesRepo;
         this.coursesRepo = coursesRepo;
         this.classRepo = classRepo;
+        this.subjectRepo = subjectRepo;
+        this.chapterRepo = chapterRepo;
     }
     async onApplicationBootstrap() {
         await this.seedCountries();
@@ -68,13 +72,27 @@ let UtilsSeedersService = class UtilsSeedersService {
     async seedClass() {
         const count = await this.classRepo.count();
         if (count == 0) {
-            const data = classes.map((item) => {
-                return {
+            const data = classes.map(async (item) => {
+                const classStandard = await this.classRepo.save({
                     name: item.name,
-                    courseId: item.course_id,
-                };
+                    courses: {
+                        id: item.course_id,
+                    },
+                });
+                const subject = await this.subjectRepo.save({
+                    name: item.subject_name,
+                    class_standard: {
+                        id: classStandard.id,
+                    },
+                });
+                for (let index = 0; index < item.chapters.length; index++) {
+                    const element = item.chapters[index];
+                    await this.chapterRepo.save({
+                        name: element.chapter_name,
+                        subjects: { id: subject.id },
+                    });
+                }
             });
-            await this.classRepo.save(data);
         }
     }
 };
@@ -84,7 +102,11 @@ exports.UtilsSeedersService = UtilsSeedersService = __decorate([
     __param(1, (0, typeorm_1.InjectRepository)(CountryList_1.CountryList)),
     __param(2, (0, typeorm_1.InjectRepository)(TblCourses_1.TblCourses)),
     __param(3, (0, typeorm_1.InjectRepository)(TblClassStandard_1.TblClassStandard)),
+    __param(4, (0, typeorm_1.InjectRepository)(TblSubjects_1.TblSubjects)),
+    __param(5, (0, typeorm_1.InjectRepository)(TblChapter_1.TblChapter)),
     __metadata("design:paramtypes", [utils_helper_service_1.UtilsHelperService,
+        typeorm_2.Repository,
+        typeorm_2.Repository,
         typeorm_2.Repository,
         typeorm_2.Repository,
         typeorm_2.Repository])

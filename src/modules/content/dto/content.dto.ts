@@ -1,5 +1,5 @@
 import { IsString, IsNotEmpty, IsNumber } from 'class-validator';
-import { User } from 'src/modules/user/entity/user.entity';
+
 import * as Joi from 'joi';
 export class updateLeaderboardReq {
   @IsNotEmpty()
@@ -16,14 +16,14 @@ export class updateMockTestReq {
   @IsString()
   subject: string;
 }
-export class GetStudentReq {
-  @IsString()
-  parentId: string;
+// export class GetStudentReq {
+//   @IsString()
+//   parentId: string;
 
-  @IsNotEmpty()
-  @IsString()
-  user: User;
-}
+//   @IsNotEmpty()
+//   @IsString()
+//   user: User;
+// }
 export class getReportCardofStudent {
   @IsNotEmpty()
   @IsString()
@@ -142,6 +142,15 @@ export interface GetLessonsDTO {
 }
 export const GetLessonsSchema = Joi.object({
   chapterId: Joi.string().optional(),
+}).options({
+  abortEarly: false,
+  allowUnknown: false,
+});
+export interface GetLPDTO {
+  id: number;
+}
+export const GetLPSchema = Joi.object({
+  id: Joi.number().optional(),
 }).options({
   abortEarly: false,
   allowUnknown: false,
