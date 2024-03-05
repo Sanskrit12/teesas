@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TblChapter = void 0;
 const typeorm_1 = require("typeorm");
 const TblSubjects_1 = require("./TblSubjects");
+const TblTopics_1 = require("./TblTopics");
 let TblChapter = class TblChapter {
 };
 exports.TblChapter = TblChapter;
@@ -26,6 +27,10 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: 'subject_id' }),
     __metadata("design:type", TblSubjects_1.TblSubjects)
 ], TblChapter.prototype, "subjects", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => TblTopics_1.TblTopics, (topics) => topics.chapters),
+    __metadata("design:type", TblTopics_1.TblTopics)
+], TblChapter.prototype, "topics", void 0);
 __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'chapter_name', length: 255 }),
     __metadata("design:type", String)

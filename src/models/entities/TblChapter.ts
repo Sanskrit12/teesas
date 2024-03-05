@@ -4,9 +4,11 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { TblSubjects } from './TblSubjects';
+import { TblTopics } from './TblTopics';
 
 @Index('id', ['id'], {})
 @Index('s_no', ['sNo'], {})
@@ -21,6 +23,9 @@ export class TblChapter {
   })
   @JoinColumn({ name: 'subject_id' })
   subjects: TblSubjects;
+
+  @OneToMany(() => TblTopics, (topics) => topics.chapters)
+  topics?: TblTopics;
 
   // @Column('varchar', { name: 'subject_id', length: 255 })
   // subjectId: string;

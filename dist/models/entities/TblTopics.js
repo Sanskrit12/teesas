@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TblTopics = void 0;
 const typeorm_1 = require("typeorm");
+const TblChapter_1 = require("./TblChapter");
 let TblTopics = class TblTopics {
 };
 exports.TblTopics = TblTopics;
@@ -19,9 +20,12 @@ __decorate([
     __metadata("design:type", Number)
 ], TblTopics.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'chapter_id', length: 255 }),
-    __metadata("design:type", String)
-], TblTopics.prototype, "chapterId", void 0);
+    (0, typeorm_1.ManyToOne)(() => TblChapter_1.TblChapter, (chapters) => chapters.topics, {
+        onDelete: 'CASCADE',
+    }),
+    (0, typeorm_1.JoinColumn)({ name: 'chapter_id' }),
+    __metadata("design:type", TblChapter_1.TblChapter)
+], TblTopics.prototype, "chapters", void 0);
 __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'topic_name', length: 255 }),
     __metadata("design:type", String)
@@ -35,7 +39,6 @@ __decorate([
     __metadata("design:type", Date)
 ], TblTopics.prototype, "created", void 0);
 exports.TblTopics = TblTopics = __decorate([
-    (0, typeorm_1.Index)('chapter_id', ['chapterId'], {}),
     (0, typeorm_1.Index)('id', ['id'], {}),
     (0, typeorm_1.Entity)('tbl_topics', { schema: 'teesas' })
 ], TblTopics);

@@ -59,18 +59,21 @@ export class ContentService {
         .createQueryBuilder('subject')
         .leftJoin('subject.class_standard', 'class_standard')
         .leftJoin('subject.chapters', 'chapter')
-        // .leftJoin('chapter.lessons', 'lesson')
+        .leftJoin('chapter.topics', 'lesson')
         // .leftJoin('lesson.materials', 'material')
         .select([
           'subject.id ',
           'subject.name',
           //'subject.mediaPath as "mediaPath"',
+          'class_standard.id',
           'class_standard.name',
           'COUNT(chapter.id) as "chapterCount"',
-          //'COUNT(material.id) as "videoCount"',
+          'COUNT(lesson.id) as "lessonCount"',
         ])
         .where('class_standard.id IN (:...packageIds)', { packageIds })
-        .groupBy('subject.id, subject.name,  class_standard.name') //subject.mediaPath,
+        .groupBy(
+          'subject.id, subject.name,  class_standard.name, class_standard.id',
+        ) //subject.mediaPath,
         .getRawMany();
 
       // for (const subject of subjects) {
